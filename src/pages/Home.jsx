@@ -71,7 +71,7 @@ const Home = () => {
               showStatus={false}
               infiniteLoop
               autoPlay
-              interval={5000}
+              interval={3000}
               className="w-40 sm:w-56 md:w-60 lg:w-72 xl:w-80"
             >
               <div>
@@ -81,7 +81,7 @@ const Home = () => {
                 <img src={malee} alt="Malee" />
               </div>
               <div>
-                <img src={pas} alt="Pas"  />
+                <img src={pas} alt="Pas" />
               </div>
             </Carousel>
           </div>
