@@ -1,37 +1,53 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Settings, Wrench, Package, Star, ArrowRight } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Settings, Wrench, Package, Star, ArrowRight } from "lucide-react";
 import bearing from "../asset/bearing_1.png";
-import malee from '../asset/malee.png';
-import pas from './../asset/pas.jpg';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { Carousel } from 'react-responsive-carousel';
+import malee from "../asset/malee.png";
+import pas from "./../asset/pas.jpg";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 const Home = () => {
   const features = [
     {
       icon: Package,
-      title: 'Quality Products',
-      description: 'Premium bearings and spare parts from trusted manufacturers worldwide.'
+      title: "Quality Products",
+      description:
+        "Premium bearings and spare parts from trusted manufacturers worldwide.",
     },
     {
       icon: Wrench,
-      title: 'Expert Installation',
-      description: 'Professional installation services by certified technicians.'
+      title: "Expert Installation",
+      description:
+        "Professional installation services by certified technicians.",
     },
     {
       icon: Settings,
-      title: 'Maintenance Support',
-      description: 'Comprehensive maintenance programs to keep your equipment running smoothly.'
-    }
+      title: "Maintenance Support",
+      description:
+        "Comprehensive maintenance programs to keep your equipment running smoothly.",
+    },
   ];
 
   const stats = [
-    { number: '10,000+', label: 'Products Available' },
-    { number: '500+', label: 'Happy Customers' },
-    { number: '15+', label: 'Years Experience' },
-    { number: '24/7', label: 'Support Available' }
+    { number: "10,000+", label: "Products Available" },
+    { number: "500+", label: "Happy Customers" },
+    { number: "15+", label: "Years Experience" },
+    { number: "24/7", label: "Support Available" },
   ];
+
+  const sliderSettings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+    
+  };
 
   return (
     <div>
@@ -64,26 +80,31 @@ const Home = () => {
               </Link>
             </div>
           </div>
-          {/* Carousel */}
+          {/* Carousel using react-slick */}
           <div className="w-full lg:w-1/2 flex justify-center mb-8 lg:mb-0">
-            <Carousel
-              showThumbs={false}
-              showStatus={false}
-              infiniteLoop
-              autoPlay
-              interval={3000}
-              className="w-40 sm:w-56 md:w-60 lg:w-72 xl:w-80"
-            >
-              <div>
-                <img src={bearing} alt="Bearing" />
+            <Slider {...sliderSettings} className="w-40 sm:w-56 md:w-60 lg:w-72 xl:w-80">
+              <div className=" w-full">
+                <img
+                  src={bearing}
+                  alt="Bearing"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <div>
-                <img src={malee} alt="Malee" />
+              <div className="aspect-[16/9] w-full">
+                <img
+                  src={malee}
+                  alt="Malee"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <div>
-                <img src={pas} alt="Pas" />
+              <div className="aspect-[16/9] w-full">
+                <img
+                  src={pas}
+                  alt="Pas"
+                  className="w-full h-full object-cover"
+                />
               </div>
-            </Carousel>
+            </Slider>
           </div>
         </div>
       </section>

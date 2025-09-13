@@ -1,0 +1,11 @@
+/* dot ปกติ */
+.slick-dots li button:before {
+  font-size: 12px;   /* ปรับขนาดได้ */
+  color: #9ca3af;    /* เทา (Tailwind gray-400) */
+  opacity: 1;        /* ให้สีชัดเต็ม */
+}
+
+/* dot ที่ active */
+.slick-dots li.slick-active button:before {
+  color: #ef4444;    /* แดง (Tailwind red-500) */
+}
