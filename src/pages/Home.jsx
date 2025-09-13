@@ -2,6 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Settings, Wrench, Package, Star, ArrowRight } from 'lucide-react';
 import bearing from "../asset/bearing_1.png";
+import malee from '../asset/malee.png';
+import pas from './../asset/pas.jpg';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Carousel } from 'react-responsive-carousel';
 
 const Home = () => {
   const features = [
@@ -60,9 +64,26 @@ const Home = () => {
               </Link>
             </div>
           </div>
-          {/* Image */}
+          {/* Carousel */}
           <div className="w-full lg:w-1/2 flex justify-center mb-8 lg:mb-0">
-            <img src={bearing} className="w-40 sm:w-56 md:w-60 lg:w-72 xl:w-80" alt="Bearing" />
+            <Carousel
+              showThumbs={false}
+              showStatus={false}
+              infiniteLoop
+              autoPlay
+              interval={5000}
+              className="w-40 sm:w-56 md:w-60 lg:w-72 xl:w-80"
+            >
+              <div>
+                <img src={bearing} alt="Bearing" />
+              </div>
+              <div>
+                <img src={malee} alt="Malee" />
+              </div>
+              <div>
+                <img src={pas} alt="Pas"  />
+              </div>
+            </Carousel>
           </div>
         </div>
       </section>
