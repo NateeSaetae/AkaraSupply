@@ -99,8 +99,12 @@ const Layout = ({ children }) => {
             {/* Company Info */}
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
-                <Settings className="h-8 w-8 text-[#149231]" />
-                <span className="text-xl font-bold">BearingsPro</span>
+                <img
+                  src={akaraLogo}
+                  alt="Logo"
+                  className="w-20 sm:w-32 md:w-40 lg:w-24 h-auto"
+                />
+                <span className="text-xl font-bold">Akara Supply</span>
               </div>
               <p className="text-gray-400 mb-4">
                 Your trusted partner for high-quality bearings and spare parts.
@@ -131,16 +135,16 @@ const Layout = ({ children }) => {
               <ul className="space-y-3">
                 <li className="flex items-center space-x-2">
                   <Phone className="h-4 w-4 text-[#149231]" />
-                  <span className="text-gray-400">+1 (555) 123-4567</span>
+                  <span className="text-gray-400">+66 6 1942 4448 , +66 8 6337 9773</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <Mail className="h-4 w-4 text-[#149231]" />
-                  <span className="text-gray-400">info@bearingspro.com</span>
+                  <span className="text-gray-400">sales.np@akarasupply.com</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <MapPin className="h-4 w-4 text-[#149231]" />
                   <span className="text-gray-400">
-                    123 Industrial St, City, ST 12345
+                    572 Soi On-nut 70/1 yek 2 On-nut.
                   </span>
                 </li>
               </ul>
@@ -149,7 +153,7 @@ const Layout = ({ children }) => {
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center">
             <p className="text-gray-400">
-              © 2024 BearingsPro. All rights reserved.
+              © 2025 Akara Supply. All rights reserved.
             </p>
           </div>
         </div>
