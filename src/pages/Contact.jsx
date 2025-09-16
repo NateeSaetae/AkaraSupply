@@ -94,12 +94,6 @@ const Contact = () => {
       title: 'Address',
       details: ['123 Industrial Street', 'Industrial Park, City, ST 12345'],
       description: 'Visit our showroom and warehouse'
-    },
-    {
-      icon: Clock,
-      title: 'Business Hours',
-      details: ['Monday - Friday: 8:00 AM - 6:00 PM', 'Saturday: 9:00 AM - 4:00 PM', 'Sunday: Closed'],
-      description: 'Emergency services available 24/7'
     }
   ];
 
@@ -128,7 +122,7 @@ const Contact = () => {
   }
 
   return (
-    <div className="py-16">
+    <div className="pb-16">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-[#149231] to-green-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -145,7 +139,7 @@ const Contact = () => {
       {/* Contact Information */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {contactInfo.map((info, index) => {
               const IconComponent = info.icon;
               return (

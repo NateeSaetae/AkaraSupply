@@ -2,8 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Settings, Wrench, Package, Star, ArrowRight } from "lucide-react";
 import bearing from "../asset/bearing_1.png";
-import malee from "../asset/malee.png";
-import pas from "./../asset/pas.jpg";
+import chain from "../asset/chain power.png";
+import totalBearing from "./../asset/total_bearing.png";
+import belt from "./../asset/belt.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -40,13 +41,12 @@ const Home = () => {
   const sliderSettings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 1500,
     arrows: false,
-    
   };
 
   return (
@@ -76,13 +76,16 @@ const Home = () => {
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-[#149231] transition-colors duration-200 justify-center"
               >
-                Get Quote
+                Contact Us
               </Link>
             </div>
           </div>
           {/* Carousel using react-slick */}
-          <div className="w-full lg:w-1/2 flex justify-center mb-8 lg:mb-0">
-            <Slider {...sliderSettings} className="w-40 sm:w-56 md:w-60 lg:w-72 xl:w-80">
+          <div className="w-full mt-10 lg:w-1/2 flex justify-center lg:mb-0">
+            <Slider
+              {...sliderSettings}
+              className="w-40 sm:w-56 md:w-60 lg:w-72 xl:w-80"
+            >
               <div className=" w-full">
                 <img
                   src={bearing}
@@ -92,15 +95,22 @@ const Home = () => {
               </div>
               <div className="aspect-[16/9] w-full">
                 <img
-                  src={malee}
-                  alt="Malee"
+                  src={chain}
+                  alt="chain"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="aspect-[16/9] w-full">
                 <img
-                  src={pas}
-                  alt="Pas"
+                  src={totalBearing}
+                  alt="totalBearing"
+                  className="w-full h-30 object-cover"
+                />
+              </div>
+              <div className="w-full">
+                <img
+                  src={belt}
+                  alt="belt"
                   className="w-full h-full object-cover"
                 />
               </div>

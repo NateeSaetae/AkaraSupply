@@ -29,9 +29,6 @@ const Layout = ({ children }) => {
                 alt="Logo"
                 className="w-20 sm:w-32 md:w-40 lg:w-24 h-auto"
               />
-              {/*<span className="text-xl font-bold text-gray-900">
-                Akara Supply
-              </span>*/}
             </Link>
 
             {/* Desktop Navigation */}
